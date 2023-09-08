@@ -20,7 +20,7 @@ app.get('/api', (req, res) => {
 
   // Get the current UTC time with a +/-2 minute window
   const timeNow = new Date();
-  const utcTime = new Date(timeNow.getTime() - timeNow.getTimezoneOffset() * 60000).toISOString();
+  const utcTime = timeNow.toISOString();
 
   // Construct GitHub URLs
   const githubFileUrl = "https://github.com/UniqueEl/hngx/server.js";
